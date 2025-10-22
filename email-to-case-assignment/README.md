@@ -7,6 +7,26 @@
 
 ---
 
+## Related Documentation
+
+**This scenario consolidates multiple related documentation files**:
+
+1. **EMAIL_TO_CASE_ASSIGNMENT_MASTER.md** - Primary implementation guide for this system
+2. **CASE_REOPENING_INCIDENT_2025-10-16.md** - Related incident when trigger was temporarily deactivated
+3. **DOMESTIC_CUSTOMER_EMAIL_ISSUE_FIX.md** - Email routing fix related to case creation
+4. **USER_LORNA_BARSBY_EMAIL_FIX.md** - Specific user email correction
+5. **DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md** - Related case automation feature
+
+**Complete Mapping**: See [/home/john/Projects/Salesforce/Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md](../../Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md) for full documentation relationship analysis.
+
+**Why These Are Related**:
+- All deal with email-to-case processing and case management
+- Case reopening incident directly tied to this system's trigger deactivation/reactivation
+- Email routing fixes ensure proper case creation for this assignment system
+- Daily reminder emails is another case automation that works alongside this system
+
+---
+
 ## Table of Contents
 
 1. [Executive Summary](#executive-summary)
