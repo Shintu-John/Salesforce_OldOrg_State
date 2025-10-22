@@ -82,13 +82,14 @@ Salesforce_OldOrg_State/
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
 
-### Batch 2: Medium Priority Scenarios (3/6 Complete)
+### Batch 2: Medium Priority Scenarios (4/6 Complete)
 
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
 | [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 22, 2025 | CS invoicing Date/Description auto-population (Oct 10-15, 2025) |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 22, 2025 | Portal exchange email SPF/DMARC fix (Oct 16, 2025) |
 | [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
+| [po-consumption-emails](po-consumption-emails/) | ✅ Complete | Oct 22, 2025 | Purchase Order consumption monitoring system - Multi-threshold alerts (50%, 75%, 90%) with automatic reset logic - Oct 14, 2025 |
 | quote-management | 📋 Planned | - | Quote management improvements |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
 
