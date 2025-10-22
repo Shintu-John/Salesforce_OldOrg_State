@@ -82,7 +82,7 @@ Salesforce_OldOrg_State/
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
 
-### Batch 2: Medium Priority Scenarios (5/6 Complete)
+### Batch 2: Medium Priority Scenarios (5/6 Complete ✅)
 
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
@@ -91,7 +91,12 @@ Salesforce_OldOrg_State/
 | [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
 | [po-consumption-emails](po-consumption-emails/) | ✅ Complete | Oct 22, 2025 | Purchase Order consumption monitoring system - Multi-threshold alerts (50%, 75%, 90%) with automatic reset logic - Oct 14, 2025 |
 | [invoice-email-portal-access](invoice-email-portal-access/) | ✅ Complete | Oct 22, 2025 | Invoice portal access solution - Customers can view/download invoice PDFs via guest-accessible portal - Modified InvoiceFileListController, ContentDistributionHelper, InvoiceTriggerHandler, InvoiceFileList.page - Automatic ContentDistribution creation - Oct 9, 2025 |
-| quote-management | 📋 Planned | - | Quote management improvements |
+
+### Batch 3: Additional Scenarios (1/4 Complete)
+
+| Scenario | Status | Last Updated | Description |
+|----------|--------|--------------|-------------|
+| [job-charge-credit-on-account](job-charge-credit-on-account/) | ✅ Complete | Oct 22, 2025 | Job Charge Credit on Account fix - Flow incorrectly executing on Credit on Account charges - Removed from entry criteria - Flow: Job_Charge_Minimum_20_Gross_on_Rebate (v6) - Oct 22, 2025 |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
 
 ---
