@@ -256,7 +256,7 @@ When documenting a new scenario:
 
 ## Support Information
 
-**Documentation Owner**: John Shintu (Claude Code AI Assistant)
+**Documentation Owner**: John Shintu 
 **Organization Admins**: [OldOrg Administrators]
 **Migration Project**: OldOrg → NewOrg Migration (2025)
 
