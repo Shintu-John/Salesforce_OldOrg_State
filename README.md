@@ -97,11 +97,13 @@ Salesforce_OldOrg_State/
 
 ## Analysis & Configuration Scenarios
 
-**Purpose**: Documentation of existing systems, data quality analysis, and configuration guides (NOT code deployments)
+**Purpose**: Documentation of existing systems, data quality analysis, troubleshooting, and user training guides (NOT code deployments)
 
 | Scenario | Status | Last Updated | Type | Description |
 |----------|--------|--------------|------|-------------|
 | [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | Analysis | SmartWaste Integration data quality analysis - 2,283 error logs analyzed with recommendations for master data cleanup |
+| [quote-pricing-notification](quote-pricing-notification/) | ✅ Complete | Oct 22, 2025 | Troubleshooting | Email delivery failure root cause analysis (Sept 24 - Oct 16, 2025) - Deleted org-wide email address - Manual UI configuration fix |
+| [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 
 ---
 
