@@ -66,6 +66,10 @@ Salesforce_OldOrg_State/
 - 🔄 **In Progress**: Currently being documented
 - 📋 **Planned**: Not yet started
 
+### Scenario Type Legend
+- **Deployment Scenarios**: Code changes, bug fixes, new features to migrate from OldOrg to NewOrg
+- ⚠️ **Analysis Scenarios**: Data analysis, recommendations, documentation of existing systems (NOT deployments)
+
 ### Documented Scenarios
 
 ### Batch 1: High Priority Scenarios (5/5 Complete ✅)
@@ -85,7 +89,7 @@ Salesforce_OldOrg_State/
 | [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 22, 2025 | CS invoicing Date/Description auto-population (Oct 10-15, 2025) |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 22, 2025 | Portal exchange email SPF/DMARC fix (Oct 16, 2025) |
 | [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
-| [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | SmartWaste Integration - automated daily sync of waste collection data to SmartWaste platform (9 classes, 3 flows, 2 scheduled jobs) |
+| [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | ⚠️ **ANALYSIS SCENARIO** - SmartWaste Integration data quality analysis (existing system documentation, NOT a deployment) |
 | quote-management | 📋 Planned | - | Quote management improvements |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
 
