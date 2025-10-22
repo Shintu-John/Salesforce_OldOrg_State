@@ -9,21 +9,23 @@
 
 ## Related Documentation
 
-**This scenario consolidates multiple related documentation files**:
+**This scenario consolidates the following documentation** (component-based analysis):
 
 1. **EMAIL_TO_CASE_ASSIGNMENT_MASTER.md** - Primary implementation guide for this system
-2. **CASE_REOPENING_INCIDENT_2025-10-16.md** - Related incident when trigger was temporarily deactivated
-3. **DOMESTIC_CUSTOMER_EMAIL_ISSUE_FIX.md** - Email routing fix related to case creation
-4. **USER_LORNA_BARSBY_EMAIL_FIX.md** - Specific user email correction
-5. **DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md** - Related case automation feature
+2. **CASE_REOPENING_INCIDENT_2025-10-16.md** - ✅ **CONSOLIDATED** - Incident when rlsServiceCaseAutoAssignTrigger was temporarily deactivated
+
+**Component Analysis - Why Consolidated**:
+- Core components: rlsServiceCaseAutoAssign.cls, rlsServiceCaseAutoAssignTest.cls, rlsServiceCaseAutoAssignTrigger.trigger
+- Case Reopening Incident required DEACTIVATING the rlsServiceCaseAutoAssignTrigger (shared component)
+- This incident is part of the system's version history (V2 - temporary deactivation for profile fix)
+- Must be deployed together to avoid version conflicts
+
+**Separate Scenarios** (No Component Overlap):
+- ❌ `DOMESTIC_CUSTOMER_EMAIL_ISSUE_FIX.md` - Uses Domestic_Create_Job.flow (different system, see Scenario #18)
+- ❌ `USER_LORNA_BARSBY_EMAIL_FIX.md` - User object only (no case assignment logic, see Scenario #28)
+- ❌ `DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md` - Different flows and components (see Scenario #5)
 
 **Complete Mapping**: See [/home/john/Projects/Salesforce/Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md](../../Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md) for full documentation relationship analysis.
-
-**Why These Are Related**:
-- All deal with email-to-case processing and case management
-- Case reopening incident directly tied to this system's trigger deactivation/reactivation
-- Email routing fixes ensure proper case creation for this assignment system
-- Daily reminder emails is another case automation that works alongside this system
 
 ---
 
