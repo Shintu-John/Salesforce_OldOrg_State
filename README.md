@@ -71,12 +71,12 @@ Salesforce_OldOrg_State/
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
 | [email-to-case-assignment](email-to-case-assignment/) | ✅ Complete | Oct 22, 2025 | Email-to-Case automatic assignment system with threshold logic, key account handling, and same-day reassignment |
-| producer-portal | 📋 Planned | - | Producer portal access and functionality |
-| secondary-transport | 📋 Planned | - | Secondary transport charge calculations |
-| cs-invoicing | 📋 Planned | - | CS invoicing improvements |
+| [producer-portal](producer-portal/) | ✅ Complete | Oct 22, 2025 | Producer portal access and functionality with V3 fixes (Oct 20-21, 2025) |
+| [sage-api-integration](sage-api-integration/) | ✅ Complete | Oct 22, 2025 | Sage API integration (OAuth + RLCS invoice export fixes) |
+| [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | daily-reminder-emails | 📋 Planned | - | Automated daily reminder email system |
+| cs-invoicing | 📋 Planned | - | CS invoicing improvements |
 | portal-exchange-email | 📋 Planned | - | Portal exchange email functionality |
-| sage-api-integration | 📋 Planned | - | Sage API integration and authentication |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
 
 ---
@@ -277,5 +277,7 @@ When documenting a new scenario:
 
 **Repository Status**: 🔄 Active - Scenarios being documented
 **Last Updated**: October 22, 2025
-**Total Scenarios**: 1 complete, 40+ planned
+**Total Scenarios**: 4 complete, 40+ planned
 **Next Steps**: Continue documenting all scenarios from OldOrg
+
+**Batch 1 Progress**: 4/5 complete (Daily Reminder Emails remaining)
