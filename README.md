@@ -105,6 +105,7 @@ Salesforce_OldOrg_State/
 | [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | Analysis | SmartWaste Integration data quality analysis - 2,283 error logs analyzed with recommendations for master data cleanup |
 | [quote-pricing-notification](quote-pricing-notification/) | ✅ Complete | Oct 22, 2025 | Troubleshooting | Email delivery failure root cause analysis (Sept 24 - Oct 16, 2025) - Deleted org-wide email address - Manual UI configuration fix |
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
+| [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
 ---
 
