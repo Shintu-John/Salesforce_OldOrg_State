@@ -542,8 +542,15 @@ All code also backed up at:
 **Business Owner**: [Producer Compliance Team]
 
 **Key Documentation**:
-- Main documentation at `/home/john/Projects/Salesforce/Documentation/PRODUCER_PORTAL_MASTER_DOCUMENTATION.md`
-- This file serves as OldOrg state snapshot for migration
+- **Primary**: `/home/john/Projects/Salesforce/Documentation/PRODUCER_PORTAL_MASTER_DOCUMENTATION.md` - Comprehensive system documentation (1926 lines)
+- **Troubleshooting**: `/home/john/Projects/Salesforce/Documentation/PRODUCER_PORTAL_ACCESS_ERROR_TROUBLESHOOTING.md` - Access error resolution (addresses Login license issues #1-#5)
+- **Archived**: `/home/john/Projects/Salesforce/Documentation/Archive/PRODUCER_PORTAL_*.md` - Historical versions and analysis documents
+- **Migration Snapshot**: This file serves as OldOrg state snapshot for migration to NewOrg
+
+**Related Documentation Analysis**:
+- All Producer Portal related documents have been consolidated into this migration scenario
+- Troubleshooting guide addresses specific access errors fixed in V2-V3 (Oct 20-21, 2025)
+- Archived documents represent earlier versions superseded by MASTER documentation
 
 ---
 
