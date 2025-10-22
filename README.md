@@ -82,7 +82,7 @@ Salesforce_OldOrg_State/
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
 
-### Batch 2: Medium Priority Scenarios (5/6 Complete ✅)
+### Batch 2: Medium Priority Scenarios (5/5 Complete ✅)
 
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
