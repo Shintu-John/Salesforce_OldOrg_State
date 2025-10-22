@@ -20,12 +20,9 @@
 - This incident is part of the system's version history (V2 - temporary deactivation for profile fix)
 - Must be deployed together to avoid version conflicts
 
-**Separate Scenarios** (No Component Overlap):
-- ❌ `DOMESTIC_CUSTOMER_EMAIL_ISSUE_FIX.md` - Uses Domestic_Create_Job.flow (different system, see Scenario #18)
-- ❌ `USER_LORNA_BARSBY_EMAIL_FIX.md` - User object only (no case assignment logic, see Scenario #28)
-- ❌ `DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md` - Different flows and components (see Scenario #5)
+**Deployment Strategy**: Single deployment of V3 (latest version) includes all consolidated documentation above.
 
-**Complete Mapping**: See [/home/john/Projects/Salesforce/Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md](../../Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md) for full documentation relationship analysis.
+**Complete Scenario Index**: See [DOCUMENTATION_MAPPING_AND_SCENARIOS.md](../../Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md) for all migration scenarios.
 
 ---
 
