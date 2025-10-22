@@ -82,16 +82,25 @@ Salesforce_OldOrg_State/
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
 
-### Batch 2: Medium Priority Scenarios (4/6 Complete)
+### Batch 2: Medium Priority Scenarios (3/6 Complete)
 
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
 | [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 22, 2025 | CS invoicing Date/Description auto-population (Oct 10-15, 2025) |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 22, 2025 | Portal exchange email SPF/DMARC fix (Oct 16, 2025) |
 | [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
-| [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | ⚠️ **ANALYSIS SCENARIO** - SmartWaste Integration data quality analysis (existing system documentation, NOT a deployment) |
 | quote-management | 📋 Planned | - | Quote management improvements |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
+
+---
+
+## Analysis & Configuration Scenarios
+
+**Purpose**: Documentation of existing systems, data quality analysis, and configuration guides (NOT code deployments)
+
+| Scenario | Status | Last Updated | Type | Description |
+|----------|--------|--------------|------|-------------|
+| [smartwaste-integration](smartwaste-integration/) | ✅ Complete | Oct 22, 2025 | Analysis | SmartWaste Integration data quality analysis - 2,283 error logs analyzed with recommendations for master data cleanup |
 
 ---
 
@@ -291,8 +300,11 @@ When documenting a new scenario:
 
 **Repository Status**: 🔄 Active - Scenarios being documented
 **Last Updated**: October 22, 2025
-**Total Scenarios**: 9 complete, 40+ planned
+**Total Scenarios**: 9 complete (8 deployment + 1 analysis), 40+ planned
 **Next Steps**: Continue documenting all scenarios from OldOrg
 
-**Batch 1 Progress**: 5/5 complete ✅
-**Batch 2 Progress**: 4/6 complete (CS Invoicing, Portal Exchange Email, Transport Charges, SmartWaste Integration)
+**Deployment Scenarios**:
+- Batch 1 Progress: 5/5 complete ✅
+- Batch 2 Progress: 3/6 complete (CS Invoicing, Portal Exchange Email, Transport Charges)
+
+**Analysis & Configuration Scenarios**: 1 complete (SmartWaste Integration)
