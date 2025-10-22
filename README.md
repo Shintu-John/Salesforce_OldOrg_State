@@ -68,6 +68,8 @@ Salesforce_OldOrg_State/
 
 ### Documented Scenarios
 
+### Batch 1: High Priority Scenarios (5/5 Complete ✅)
+
 | Scenario | Status | Last Updated | Description |
 |----------|--------|--------------|-------------|
 | [email-to-case-assignment](email-to-case-assignment/) | ✅ Complete | Oct 22, 2025 | Email-to-Case automatic assignment system with threshold logic, key account handling, and same-day reassignment |
@@ -75,8 +77,16 @@ Salesforce_OldOrg_State/
 | [sage-api-integration](sage-api-integration/) | ✅ Complete | Oct 22, 2025 | Sage API integration (OAuth + RLCS invoice export fixes) |
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
-| cs-invoicing | 📋 Planned | - | CS invoicing improvements |
-| portal-exchange-email | 📋 Planned | - | Portal exchange email functionality |
+
+### Batch 2: Medium Priority Scenarios (3/6 Complete)
+
+| Scenario | Status | Last Updated | Description |
+|----------|--------|--------------|-------------|
+| [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 22, 2025 | CS invoicing Date/Description auto-population (Oct 10-15, 2025) |
+| [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 22, 2025 | Portal exchange email SPF/DMARC fix (Oct 16, 2025) |
+| [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
+| quote-management | 📋 Planned | - | Quote management improvements |
+| smartwaste-integration | 📋 Planned | - | SmartWaste integration |
 | [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
 
 ---
@@ -277,7 +287,8 @@ When documenting a new scenario:
 
 **Repository Status**: 🔄 Active - Scenarios being documented
 **Last Updated**: October 22, 2025
-**Total Scenarios**: 5 complete, 40+ planned
+**Total Scenarios**: 8 complete, 40+ planned
 **Next Steps**: Continue documenting all scenarios from OldOrg
 
-**Batch 1 Progress**: 5/5 complete ✅ (All Batch 1 scenarios documented)
+**Batch 1 Progress**: 5/5 complete ✅
+**Batch 2 Progress**: 3/6 complete (CS Invoicing, Portal Exchange Email, Transport Charges)
