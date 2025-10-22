@@ -11,8 +11,8 @@
 
 **This scenario consolidates the following documentation** (component-based analysis):
 
-1. **EMAIL_TO_CASE_ASSIGNMENT_MASTER.md** - Primary implementation guide for this system
-2. **CASE_REOPENING_INCIDENT_2025-10-16.md** - ✅ **CONSOLIDATED** - Incident when rlsServiceCaseAutoAssignTrigger was temporarily deactivated
+1. **[EMAIL_TO_CASE_ASSIGNMENT_MASTER.md](source-docs/EMAIL_TO_CASE_ASSIGNMENT_MASTER.md)** - Primary implementation guide for this system
+2. **[CASE_REOPENING_INCIDENT_2025-10-16.md](source-docs/CASE_REOPENING_INCIDENT_2025-10-16.md)** - ✅ **CONSOLIDATED** - Incident when rlsServiceCaseAutoAssignTrigger was temporarily deactivated
 
 **Component Analysis - Why Consolidated**:
 - Core components: rlsServiceCaseAutoAssign.cls, rlsServiceCaseAutoAssignTest.cls, rlsServiceCaseAutoAssignTrigger.trigger

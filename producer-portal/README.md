@@ -31,8 +31,8 @@ The Producer Portal is a Customer Community Plus portal that enables producer co
 
 **This scenario consolidates multiple documentation files**:
 
-1. **PRODUCER_PORTAL_MASTER_DOCUMENTATION.md** - Primary comprehensive system documentation (1926 lines)
-2. **PRODUCER_PORTAL_ACCESS_ERROR_TROUBLESHOOTING.md** - Troubleshooting guide for Login license access issues
+1. **[PRODUCER_PORTAL_MASTER_DOCUMENTATION.md](source-docs/PRODUCER_PORTAL_MASTER_DOCUMENTATION.md)** - Primary comprehensive system documentation (1926 lines)
+2. **[PRODUCER_PORTAL_ACCESS_ERROR_TROUBLESHOOTING.md](source-docs/PRODUCER_PORTAL_ACCESS_ERROR_TROUBLESHOOTING.md)** - Troubleshooting guide for Login license access issues
 3. **Archive/PRODUCER_PORTAL_*.md** - Historical versions and analysis documents
 
 **Complete Mapping**: See [/home/john/Projects/Salesforce/Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md](../../Documentation/DOCUMENTATION_MAPPING_AND_SCENARIOS.md) for full documentation relationship analysis.
