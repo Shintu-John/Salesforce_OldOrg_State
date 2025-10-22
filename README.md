@@ -3,13 +3,13 @@
 **Organization**: OldOrg (Recycling Lives Service - recyclinglives.my.salesforce.com)
 **Purpose**: Document current state of all implementations in OldOrg before migration to NewOrg
 **Created**: October 22, 2025
-**Status**: 🔄 Migration in Progress
+**Status**: 🔄 Fresh Start - Enhanced Workflow Implementation
 
 ---
 
 ## Repository Purpose
 
-This repository serves as a **snapshot and documentation** of all customizations, features, and implementations currently deployed in **OldOrg** (the legacy Salesforce organization that is being migrated FROM).
+This repository serves as a **snapshot and documentation** of all customizations, features, and implementations currently deployed in **OldOrg** (the legacy Salesforce organization being migrated FROM).
 
 ### Why This Repository Exists
 
@@ -26,6 +26,7 @@ This repository serves as a **snapshot and documentation** of all customizations
 - **Configuration details** (Custom Settings, Custom Fields, etc.)
 - **Verification data** (deployment IDs, active versions, test results)
 - **Business logic explanations** (why things were built the way they were)
+- **Code content verification** (line-by-line confirmation of documented changes)
 
 ---
 
@@ -34,18 +35,18 @@ This repository serves as a **snapshot and documentation** of all customizations
 ```
 Salesforce_OldOrg_State/
 ├── README.md (this file)
-├── email-to-case-assignment/           ← Each scenario gets its own folder
+├── producer-portal/                     ← Each scenario gets its own folder
 │   ├── README.md                        ← Complete documentation of current state
+│   ├── source-docs/                     ← Original documentation (archived)
+│   │   └── ORIGINAL_DOCS.md
 │   └── code/                            ← Actual code retrieved from OldOrg
 │       ├── classes/
 │       ├── triggers/
 │       ├── flows/
 │       └── objects/
-├── producer-portal/                     ← Another scenario
+├── email-to-case-assignment/            ← Another scenario
 │   ├── README.md
-│   └── code/
-├── secondary-transport/                 ← Another scenario
-│   ├── README.md
+│   ├── source-docs/
 │   └── code/
 └── [more scenarios...]
 ```
@@ -55,53 +56,26 @@ Salesforce_OldOrg_State/
 - **Flat structure**: All scenarios at root level
 - **Kebab-case names**: `email-to-case-assignment`, `producer-portal`
 - **Descriptive**: Folder name clearly indicates the feature/scenario
-- **Consolidated**: Related features grouped together (e.g., "Email-to-Case" includes Case Assignment + Case Reopening)
+- **README.md standard**: Always use README.md (never DEPLOYMENT_VERIFICATION.md or GAP_ANALYSIS.md)
 
 ---
 
 ## Scenarios Documented
 
 ### Status Legend
-- ✅ **Complete**: Fully documented with code
+- ✅ **Complete**: Fully documented with code verification
 - 🔄 **In Progress**: Currently being documented
 - 📋 **Planned**: Not yet started
 
 ### Scenario Type Legend
 - **Deployment Scenarios**: Code changes, bug fixes, new features to migrate from OldOrg to NewOrg
-- ⚠️ **Analysis Scenarios**: Data analysis, recommendations, documentation of existing systems (NOT deployments)
-
-### Documented Scenarios
-
-### Batch 1: High Priority Scenarios (5/5 Complete ✅)
-
-| Scenario | Status | Last Updated | Description |
-|----------|--------|--------------|-------------|
-| [email-to-case-assignment](email-to-case-assignment/) | ✅ Complete | Oct 22, 2025 | Email-to-Case automatic assignment system with threshold logic, key account handling, and same-day reassignment |
-| [producer-portal](producer-portal/) | ✅ Complete | Oct 22, 2025 | Producer portal access and functionality with V3 fixes (Oct 20-21, 2025) |
-| [sage-api-integration](sage-api-integration/) | ✅ Complete | Oct 22, 2025 | Sage API integration (OAuth + RLCS invoice export fixes) |
-| [secondary-transport](secondary-transport/) | ✅ Complete | Oct 22, 2025 | Secondary transport charge system with V4 bug fixes (Oct 7-15, 2025) |
-| [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 22, 2025 | Two-tier consolidated reporting system (Tier 1: Delivery Confirmation 8AM, Tier 2: Schedule Creation 9AM) - 99.6% email reduction |
-
-### Batch 2: Medium Priority Scenarios (5/5 Complete ✅)
-
-| Scenario | Status | Last Updated | Description |
-|----------|--------|--------------|-------------|
-| [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 22, 2025 | CS invoicing Date/Description auto-population (Oct 10-15, 2025) |
-| [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 22, 2025 | Portal exchange email SPF/DMARC fix (Oct 16, 2025) |
-| [transport-charges](transport-charges/) | ✅ Complete | Oct 22, 2025 | Transport charge bug fixes - Issue 1 (missing charges) and Issue 3 (calculation bug) - Oct 14-15, 2025 |
-| [po-consumption-emails](po-consumption-emails/) | ✅ Complete | Oct 22, 2025 | Purchase Order consumption monitoring system - Multi-threshold alerts (50%, 75%, 90%) with automatic reset logic - Oct 14, 2025 |
-| [invoice-email-portal-access](invoice-email-portal-access/) | ✅ Complete | Oct 22, 2025 | Invoice portal access solution - Customers can view/download invoice PDFs via guest-accessible portal - Modified InvoiceFileListController, ContentDistributionHelper, InvoiceTriggerHandler, InvoiceFileList.page - Automatic ContentDistribution creation - Oct 9, 2025 |
-
-### Batch 3: Additional Scenarios (1/4 Complete)
-
-| Scenario | Status | Last Updated | Description |
-|----------|--------|--------------|-------------|
-| [job-charge-credit-on-account](job-charge-credit-on-account/) | ✅ Complete | Oct 22, 2025 | Job Charge Credit on Account fix - Flow incorrectly executing on Credit on Account charges - Removed from entry criteria - Flow: Job_Charge_Minimum_20_Gross_on_Rebate (v6) - Oct 22, 2025 |
-| [more coming...] | 📋 Planned | - | Additional scenarios to be documented |
+- ⚠️ **Analysis Scenarios**: Data analysis, recommendations, documentation of existing systems (NOT code deployments)
 
 ---
 
-## Analysis & Configuration Scenarios
+## Current Scenarios (Fresh Start - Oct 22, 2025)
+
+### Analysis & Configuration Scenarios (4 Complete ✅)
 
 **Purpose**: Documentation of existing systems, data quality analysis, troubleshooting, and user training guides (NOT code deployments)
 
@@ -112,6 +86,61 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
+### Deployment Scenarios (0 Complete - Fresh Start)
+
+**Status**: All previous deployment scenarios removed Oct 22, 2025 for systematic recreation with enhanced workflow.
+
+**Next Scenarios to Document** (Priority Order):
+
+| # | Scenario | Source Documentation | Complexity | Est. Time |
+|---|----------|---------------------|------------|-----------|
+| 1 | producer-portal | PRODUCER_PORTAL_MASTER_DOCUMENTATION.md | High | 2-3 hours |
+| 2 | email-to-case-assignment | EMAIL_TO_CASE_ASSIGNMENT_MASTER.md | High | 2-3 hours |
+| 3 | sage-api-integration | SAGE_API_HTTP_401_AUTHENTICATION_FIX.md | Medium | 1.5-2 hours |
+| 4 | daily-reminder-emails | DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
+| 5 | cs-invoicing | CS_INVOICING_DATE_DESCRIPTION_FIELDS.md | Medium | 1.5-2 hours |
+| 6 | portal-exchange-email | PORTAL_EXCHANGE_EMAIL_FIX_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
+| 7 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md | Medium | 1.5-2 hours |
+| 8 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md | Medium | 1.5-2 hours |
+| 9 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md | Low | 1-1.5 hours |
+| 10 | invoice-email-portal-access | INVOICE_EMAIL_PORTAL_ACCESS_SOLUTION.md | Low | 1-1.5 hours |
+| 11 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md | Low | 1 hour |
+
+---
+
+## Fresh Start - Enhanced Workflow (Oct 22, 2025)
+
+### Why Fresh Start?
+
+Previous documentation lacked critical verification steps:
+- ❌ No line-by-line code content verification
+- ❌ Incomplete dependency analysis from actual code
+- ❌ Missing CLI vs Manual UI deployment step distinction
+- ❌ Inconsistent file naming conventions
+
+### Enhanced Workflow Now Includes
+
+✅ **Step 3b: Code Dependency Analysis**
+- Read actual Apex classes to find SOQL queries (extract fields/objects)
+- Find Custom Settings accessed
+- Find Queues, Record Types, Custom Labels referenced
+- Read Flow metadata for dependencies
+- Create complete dependency list with line numbers
+
+✅ **Step 3c: Implementation Verification (CRITICAL)**
+- Date verification: Compare LastModifiedDate with documented deployment date
+- Line-by-line code verification: Use sed, grep to find documented code snippets
+- Logic flow verification: Verify trigger→method→field flow
+- Functional verification: Query data to prove feature works in OldOrg
+- Dependency verification: Query for all dependencies
+- **STOP and ASK USER if any verification fails**
+
+✅ **Professional Documentation Standards**
+- ALWAYS use README.md (never DEPLOYMENT_VERIFICATION.md)
+- No AI references in commits or documentation
+- Working cross-repo GitHub links
+- Clear marking of CLI vs Manual UI steps
+
 ---
 
 ## How to Use This Repository
@@ -119,9 +148,10 @@ Salesforce_OldOrg_State/
 ### For Migration Planning
 
 1. **Review scenario README**: Understand what's currently deployed in OldOrg
-2. **Check code folder**: See actual deployed code
-3. **Verify versions**: Confirm active flow versions, trigger statuses
-4. **Understand dependencies**: Review integration points and related scenarios
+2. **Check source-docs folder**: See original documentation (archived)
+3. **Check code folder**: See actual deployed code (verified)
+4. **Verify versions**: Confirm active flow versions, trigger statuses
+5. **Understand dependencies**: Review integration points and related scenarios
 
 ### For Gap Analysis
 
@@ -135,6 +165,7 @@ Salesforce_OldOrg_State/
 1. **Historical lookup**: "How did we implement X in OldOrg?"
 2. **Configuration reference**: "What were the custom setting values?"
 3. **Business logic**: "Why was this built this way?"
+4. **Code verification**: "Does the deployed code match the documentation?"
 
 ---
 
@@ -142,33 +173,34 @@ Salesforce_OldOrg_State/
 
 Each scenario folder contains:
 
+### Folder Structure
+
+```
+scenario-name/
+├── README.md                        ← Complete OldOrg state documentation
+├── source-docs/                     ← Original documentation (archived)
+│   └── ORIGINAL_DOCS.md
+└── code/                            ← Verified code from OldOrg
+    ├── classes/
+    ├── triggers/
+    ├── flows/
+    └── objects/
+```
+
 ### README.md Structure
 
 1. **Executive Summary**: What the system does, key features
 2. **System Overview**: High-level architecture and flow
 3. **Components Inventory**: Detailed list of all components (Apex, Flows, Custom Objects, etc.)
 4. **Current State Verification**: Queries and results showing what's actually deployed
-5. **Business Logic**: How the system works, assignment rules, calculations
-6. **Configuration**: Adjustable settings and how to change them
-7. **Integration Points**: How this scenario connects to other systems
-8. **Related Scenarios**: Links to related features
-9. **Files and Metadata**: Location of source code
-10. **Version History**: Chronological history of implementations
-
-### Code Folder Structure
-
-```
-code/
-├── classes/                    ← Apex classes (.cls and .cls-meta.xml)
-├── triggers/                   ← Apex triggers (.trigger and .trigger-meta.xml)
-├── flows/                      ← Flows (.flow-meta.xml)
-├── objects/                    ← Custom Objects and Fields
-│   ├── CustomObject__c/
-│   │   ├── CustomObject__c.object-meta.xml
-│   │   └── fields/
-│   │       └── CustomField__c.field-meta.xml
-└── README-CODE.md (optional)   ← Code-specific notes
-```
+5. **Code Content Verification**: Line-by-line confirmation of documented changes
+6. **Business Logic**: How the system works, assignment rules, calculations
+7. **Configuration**: Adjustable settings and how to change them
+8. **Dependencies**: All referenced objects, fields, settings, queues, record types
+9. **Integration Points**: How this scenario connects to other systems
+10. **Related Documentation**: Links to source-docs and NewOrg migration package
+11. **Files and Metadata**: Location of source code
+12. **Version History**: Chronological history of implementations
 
 ---
 
@@ -178,25 +210,28 @@ All documented scenarios include verification data showing:
 
 - **Deployment IDs**: Proof of what was deployed and when
 - **Active Versions**: Flow versions, trigger statuses
+- **Code Content**: Line-by-line verification using sed/grep
 - **Test Results**: Test coverage, passing tests
 - **Last Modified Dates**: Timestamps of last changes
 - **Modified By**: Who made the changes
+- **Functional Proof**: Query results showing feature works
 
-### Example Verification Queries
+### Example Code Verification
 
-**Check Apex Class Version:**
+**Verify documented code exists:**
 ```bash
-sf data query --query "SELECT Name, LastModifiedDate, LastModifiedBy.Name FROM ApexClass WHERE Name = 'ClassName'" --target-org OldOrg --use-tooling-api
-```
+# Read the actual retrieved code
+cat force-app/main/default/classes/ClassName.cls
 
-**Check Trigger Status:**
-```bash
-sf data query --query "SELECT Name, Status FROM ApexTrigger WHERE Name = 'TriggerName'" --target-org OldOrg --use-tooling-api
-```
+# Check specific line numbers mentioned in docs
+sed -n '45p' force-app/main/default/classes/ClassName.cls
+sed -n '78p' force-app/main/default/classes/ClassName.cls
 
-**Check Flow Versions:**
-```bash
-sf data query --query "SELECT DefinitionId, VersionNumber, Status FROM Flow WHERE Definition.DeveloperName = 'FlowName' ORDER BY VersionNumber" --target-org OldOrg --use-tooling-api
+# Search for documented code snippets
+grep -n "List<CustomObject__c> records" force-app/main/default/classes/ClassName.cls
+grep -n "HelperClass.helperMethod" force-app/main/default/classes/ClassName.cls
+
+# If NOT FOUND → STOP and ASK USER
 ```
 
 ---
@@ -220,6 +255,7 @@ sf data query --query "SELECT DefinitionId, VersionNumber, Status FROM Flow WHER
 - Documents OldOrg as the **source** of migration
 - Provides complete picture of what needs to be migrated
 - Serves as reference during and after migration
+- Maintains verification trail of code content
 
 ---
 
@@ -229,35 +265,24 @@ sf data query --query "SELECT DefinitionId, VersionNumber, Status FROM Flow WHER
 
 **Salesforce_NewOrg** (https://github.com/Shintu-John/Salesforce_NewOrg.git)
 - Contains **migration plans** for each scenario
-- Includes **deployment steps** with commands
+- Includes **deployment steps** with commands (CLI and Manual UI)
 - Provides **gap analysis** comparing OldOrg vs NewOrg
 - Offers **rollback plans** for each migration
-- **Use together**: Review OldOrg state (this repo) → Plan migration (NewOrg repo)
+- Has **deployment-ready code** in code/ folders
+
+**Use Together**:
+1. Review OldOrg state (this repo) → Understand what exists
+2. Plan migration (NewOrg repo) → Deploy to NewOrg
 
 ---
 
-## Contributing
+## Workflow Documentation
 
-### Adding New Scenarios
-
-When documenting a new scenario:
-
-1. **Create scenario folder**: `mkdir scenario-name`
-2. **Create README.md**: Document current state using standard structure
-3. **Create code folder**: `mkdir scenario-name/code`
-4. **Retrieve code from OldOrg**: Use `sf project retrieve start` commands
-5. **Copy code files**: Place in appropriate subfolders (classes/, triggers/, etc.)
-6. **Verify current state**: Run queries to confirm active versions
-7. **Update master README**: Add scenario to table above
-
-### Documentation Best Practices
-
-- ✅ Be comprehensive: Include ALL details
-- ✅ Show verification: Include query results
-- ✅ Explain WHY: Not just WHAT, but WHY it was built this way
-- ✅ Link related scenarios: Cross-reference dependencies
-- ✅ Include timestamps: When was this verified?
-- ✅ Show version history: How did this evolve over time?
+For complete workflow instructions, see:
+- [CLAUDE_WORKFLOW_RULES.md](../Documentation/CLAUDE_WORKFLOW_RULES.md)
+- [IMPLEMENTATION_VERIFICATION_CHECKLIST.md](../Documentation/IMPLEMENTATION_VERIFICATION_CHECKLIST.md)
+- [SCENARIO_MIGRATION_CHECKLIST.md](../Documentation/SCENARIO_MIGRATION_CHECKLIST.md)
+- [MIGRATION_PROGRESS.md](../Documentation/MIGRATION_PROGRESS.md)
 
 ---
 
@@ -277,19 +302,11 @@ When documenting a new scenario:
 - **OldOrg changes**: Make directly in OldOrg, then update this documentation
 - **NewOrg deployment**: Use the **Salesforce_NewOrg** repository
 
-### Keeping Documentation Current
-
-**When changes are made to OldOrg:**
-1. Update the scenario README with new information
-2. Re-retrieve code if Apex/Flows were modified
-3. Update verification data (deployment IDs, versions)
-4. Update "Last Updated" date
-
 ---
 
 ## Support Information
 
-**Documentation Owner**: John Shintu 
+**Documentation Owner**: John Shintu
 **Organization Admins**: [OldOrg Administrators]
 **Migration Project**: OldOrg → NewOrg Migration (2025)
 
@@ -302,19 +319,13 @@ When documenting a new scenario:
 
 ## Quick Links
 
-- [Email-to-Case Assignment Documentation](email-to-case-assignment/README.md)
 - [NewOrg Migration Repository](https://github.com/Shintu-John/Salesforce_NewOrg.git)
 - [Salesforce Project Documentation](../Documentation/)
+- [Migration Progress Tracking](../Documentation/MIGRATION_PROGRESS.md)
 
 ---
 
-**Repository Status**: 🔄 Active - Scenarios being documented
+**Repository Status**: 🔄 Fresh Start - Ready for Enhanced Workflow
 **Last Updated**: October 22, 2025
-**Total Scenarios**: 9 complete (8 deployment + 1 analysis), 40+ planned
-**Next Steps**: Continue documenting all scenarios from OldOrg
-
-**Deployment Scenarios**:
-- Batch 1 Progress: 5/5 complete ✅
-- Batch 2 Progress: 3/6 complete (CS Invoicing, Portal Exchange Email, Transport Charges)
-
-**Analysis & Configuration Scenarios**: 1 complete (SmartWaste Integration)
+**Total Scenarios**: 4 complete (all analysis/configuration), 11 high-priority deployment scenarios planned
+**Next Steps**: Begin with producer-portal following complete enhanced workflow
