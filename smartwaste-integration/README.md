@@ -1,9 +1,35 @@
 # SmartWaste Integration - OldOrg Current State
 
+⚠️ **SCENARIO TYPE: ANALYSIS ONLY - NOT A DEPLOYMENT SCENARIO**
+
 **Organization**: OldOrg (Recycling Lives Service - recyclinglives.my.salesforce.com)
 **Documentation Date**: October 22, 2025
 **Status**: ✅ Active in Production
 **Last Modified**: June 13, 2025 (Main batch classes and flow)
+
+---
+
+## ⚠️ Important: This is an Analysis Scenario
+
+**What This Document Is**:
+- State documentation of EXISTING SmartWaste Integration system (deployed years ago)
+- Analysis of data quality issues (2,283 error logs analyzed Oct 14, 2025)
+- Recommendations for master data cleanup and user training
+
+**What This Is NOT**:
+- NOT a new feature deployment
+- NOT a bug fix implementation
+- NOT code changes to migrate
+
+**SmartWaste Integration Code**:
+- Already exists in OldOrg (deployed 2021-2025)
+- Already exists in NewOrg (deployed but flows inactive, jobs not scheduled)
+- No NEW code was developed - this analyzes EXISTING integration
+
+**Migration Consideration**:
+- NewOrg needs CONFIGURATION (activate flows, schedule jobs) - not code deployment
+- Gap Analysis identifies configuration gaps, not missing code
+- Migration Plan is activation/configuration guide, not code deployment guide
 
 ---
 
