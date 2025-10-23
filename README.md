@@ -105,8 +105,8 @@ Salesforce_OldOrg_State/
 
 | # | Scenario | Source Documentation | Complexity | Est. Time |
 |---|----------|---------------------|------------|-----------|
-| 7 | cs-invoicing | CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/) | Medium | 1.5-2 hours |
-| 8 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/) | Medium | 1.5-2 hours |
+| 7 | ~~cs-invoicing~~ | ~~CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
+| 8 | ~~secondary-transport~~ | ~~SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
 | 9 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md (Backup/) | Low | 1-1.5 hours |
 | 10 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/) | Low | 1 hour |
 | 11 | rlcs-vendor-invoice-sage | RLCS_VENDOR_INVOICE_SAGE_EXPORT_FIX.md (Documentation/) | Medium | 1.5-2 hours |
