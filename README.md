@@ -75,7 +75,7 @@ Salesforce_OldOrg_State/
 
 ## Current Scenarios (Fresh Start - Oct 22, 2025)
 
-### Analysis & Configuration Scenarios (5 Complete ✅)
+### Analysis & Configuration Scenarios (8 Complete ✅)
 
 **Purpose**: Documentation of existing systems, data quality analysis, troubleshooting, and user training guides (NOT code deployments)
 
@@ -86,6 +86,9 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 | [sage-api-integration](sage-api-integration/) | ✅ Complete | Oct 23, 2025 | Configuration/OAuth | Sage API OAuth authentication procedure - HTTP 401 authentication failures resolved Oct 15-17, 2025 - Manual re-authentication of "SIA" Named Credential - Refresh token expiration cycle (60-90 days) |
+| [case-reopening-incident](case-reopening-incident/) | ✅ Complete | Oct 23, 2025 | Incident Analysis | Critical incident Oct 16, 2025 - Cases failed to reopen when customers replied - 584 cases without record types (profile misconfiguration) - Customer escalation (5 ignored emails, Wates) - Fixed profile, assigned record types, closed 123 incorrectly reopened cases |
+| [domestic-customer-email](domestic-customer-email/) | ✅ Complete | Oct 23, 2025 | Configuration Fix | Person Account email issue Oct 9, 2025 - PersonEmail field missing from page layout - Staff couldn't add email, blocking skip booking - Fixed by adding field to Domestic Customer layout |
+| [user-lorna-barsby-email](user-lorna-barsby-email/) | ✅ Complete | Oct 23, 2025 | User Account Fix | User account email typo Oct 8, 2025 - Created with incorrect domain (missing 's') - Stuck in verification loop - Cannot update unverified user email - Solution: Deactivate + Create new user |
 
 ### Deployment Scenarios (12 Complete ✅)
 
