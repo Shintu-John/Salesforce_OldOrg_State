@@ -75,7 +75,7 @@ Salesforce_OldOrg_State/
 
 ## Current Scenarios (Fresh Start - Oct 22, 2025)
 
-### Analysis & Configuration Scenarios (4 Complete ✅)
+### Analysis & Configuration Scenarios (5 Complete ✅)
 
 **Purpose**: Documentation of existing systems, data quality analysis, troubleshooting, and user training guides (NOT code deployments)
 
@@ -85,6 +85,7 @@ Salesforce_OldOrg_State/
 | [quote-pricing-notification](quote-pricing-notification/) | ✅ Complete | Oct 22, 2025 | Troubleshooting | Email delivery failure root cause analysis (Sept 24 - Oct 16, 2025) - Deleted org-wide email address - Manual UI configuration fix |
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
+| [sage-api-integration](sage-api-integration/) | ✅ Complete | Oct 23, 2025 | Configuration/OAuth | Sage API OAuth authentication procedure - HTTP 401 authentication failures resolved Oct 15-17, 2025 - Manual re-authentication of "SIA" Named Credential - Refresh token expiration cycle (60-90 days) |
 
 ### Deployment Scenarios (12 Complete ✅)
 
