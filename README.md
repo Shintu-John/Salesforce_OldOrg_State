@@ -86,7 +86,7 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
-### Deployment Scenarios (5 Complete ✅)
+### Deployment Scenarios (6 Complete ✅)
 
 **Purpose**: Code changes, bug fixes, new features that need to be migrated from OldOrg to NewOrg.
 
@@ -97,13 +97,13 @@ Salesforce_OldOrg_State/
 | [invoice-email-portal-access](invoice-email-portal-access/) | ✅ Complete | Oct 23, 2025 | 5 classes, 1 trigger, 1 page | Invoice Portal enhancement - Enables customers to view and download invoice PDFs from public portal. **Implemented Oct 9, 2025.** Includes automatic ContentDistribution creation via trigger, invoice PDF deduplication logic, and portal UI updates. |
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 23, 2025 | 2 new classes, 1 modified class, 2 test classes | Two-tier consolidated email reporting system. **Implemented Oct 20, 2025.** Reduces email volume 99.6% (556 → 2 daily reports). Tier 1: Delivery Confirmation (438 Jobs, 8 AM). Tier 2: Schedule Creation (133 Jobs, 9 AM). Eliminates record locking errors. |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 23, 2025 | 2 classes, 1 trigger, 6 flows | SPF/DMARC email fix for portal exchanges. **Implemented Oct 16, 2025.** Resolves email rejection for customers with strict SPF policies (Amey Highways). Portal flows now send from org-wide address. Handler extracts portal user email for Contact/Account matching. |
+| [transport-charges](transport-charges/) | ✅ Complete | Oct 23, 2025 | 2 classes (819+2400 lines), 1 validation rule | RLCS Transport & Data Issues - **3 critical bugs fixed (Oct 14-15).** Issue 1: Missing charges (£919K recovered). Issue 3: Hybrid calculation bug (£870K saved). **Financial impact: £1.79M.** OrderItem now single source of truth for rates and flags. Line-by-line code verification complete. |
 
 **Next Scenarios to Document** (Priority Order - Deployment Scenarios):
 
 | # | Scenario | Source Documentation | Complexity | Est. Time |
 |---|----------|---------------------|------------|-----------|
-| 6 | cs-invoicing | CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/) | Medium | 1.5-2 hours |
-| 7 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md (Backup/) | Medium | 1.5-2 hours |
+| 7 | cs-invoicing | CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/) | Medium | 1.5-2 hours |
 | 8 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/) | Medium | 1.5-2 hours |
 | 9 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md (Backup/) | Low | 1-1.5 hours |
 | 10 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/) | Low | 1 hour |
@@ -333,8 +333,8 @@ For complete workflow instructions, see:
 
 **Repository Status**: ✅ Enhanced Workflow Proven Successful
 **Last Updated**: October 23, 2025
-**Total Scenarios**: 9 complete (5 deployment + 4 analysis/configuration)
-**Deployment Scenarios**: 5 of 18 complete (27.8%)
+**Total Scenarios**: 10 complete (6 deployment + 4 analysis/configuration)
+**Deployment Scenarios**: 6 of 18 complete (33.3%)
 **Configuration Scenarios**: 4 of 8 complete (50.0%)
-**Overall Progress**: 25.7% complete (9/35 scenarios)
-**Next Deployment**: cs-invoicing (Medium Priority #6)
+**Overall Progress**: 28.6% complete (10/35 scenarios)
+**Next Deployment**: cs-invoicing (Medium Priority #7)
