@@ -75,7 +75,7 @@ Salesforce_OldOrg_State/
 
 ## Current Scenarios (Fresh Start - Oct 22, 2025)
 
-### Analysis & Configuration Scenarios (8 Complete ✅)
+### Analysis & Configuration Scenarios (22 Complete ✅)
 
 **Purpose**: Documentation of existing systems, data quality analysis, troubleshooting, and user training guides (NOT code deployments)
 
@@ -89,6 +89,20 @@ Salesforce_OldOrg_State/
 | [case-reopening-incident](case-reopening-incident/) | ✅ Complete | Oct 23, 2025 | Incident Analysis | Critical incident Oct 16, 2025 - Cases failed to reopen when customers replied - 584 cases without record types (profile misconfiguration) - Customer escalation (5 ignored emails, Wates) - Fixed profile, assigned record types, closed 123 incorrectly reopened cases |
 | [domestic-customer-email](domestic-customer-email/) | ✅ Complete | Oct 23, 2025 | Configuration Fix | Person Account email issue Oct 9, 2025 - PersonEmail field missing from page layout - Staff couldn't add email, blocking skip booking - Fixed by adding field to Domestic Customer layout |
 | [user-lorna-barsby-email](user-lorna-barsby-email/) | ✅ Complete | Oct 23, 2025 | User Account Fix | User account email typo Oct 8, 2025 - Created with incorrect domain (missing 's') - Stuck in verification loop - Cannot update unverified user email - Solution: Deactivate + Create new user |
+| [dashboard-access](dashboard-access/) | ✅ Complete | Oct 23, 2025 | Reference/Permissions | Dashboard folder access permissions - Lucas Groves dashboard access configuration |
+| [nathan-blake-adoc](nathan-blake-adoc/) | ✅ Complete | Oct 23, 2025 | Reference/Permissions | Nathan Blake ADOC permission issue - Permission set configuration |
+| [orderitem-data-model](orderitem-data-model/) | ✅ Complete | Oct 23, 2025 | Reference/Data Model | OrderItem data model documentation for bulk updates - Field mappings and relationships |
+| [outlook-email-sync](outlook-email-sync/) | ✅ Complete | Oct 23, 2025 | Reference/Integration | Outlook email sync and Einstein Activity Capture configuration guide |
+| [producer-portal-troubleshooting](producer-portal-troubleshooting/) | ✅ Complete | Oct 23, 2025 | Reference/Troubleshooting | Producer Portal access error troubleshooting guide - Common issues and resolutions |
+| [rebekah-stewart-quote](rebekah-stewart-quote/) | ✅ Complete | Oct 23, 2025 | Reference/Issue | Rebekah Stewart quote line item issue - Specific case resolution |
+| [rebekah-stewart-smartwaste](rebekah-stewart-smartwaste/) | ✅ Complete | Oct 23, 2025 | Reference/Permissions | Rebekah Stewart SmartWaste report access fix - Report folder permissions |
+| [sharepoint-file-access](sharepoint-file-access/) | ✅ Complete | Oct 23, 2025 | Reference/Integration | SharePoint file access guide - Integration setup and troubleshooting |
+| [sharepoint-file-sync](sharepoint-file-sync/) | ✅ Complete | Oct 23, 2025 | Reference/Integration | SharePoint file sync investigation - Sync configuration and issues |
+| [shn-website-quotes](shn-website-quotes/) | ✅ Complete | Oct 23, 2025 | Reference/Process | SHN Website quotes closure process - Workflow documentation |
+| [si13024-rollup](si13024-rollup/) | ✅ Complete | Oct 23, 2025 | Reference/Issue | SI13024 rollup issue complete resolution - Field rollup configuration fix |
+| [supplier-contact-access](supplier-contact-access/) | ✅ Complete | Oct 23, 2025 | Reference/Analysis | Supplier contact access analysis - Sharing and permissions review |
+| [test-failure-guide](test-failure-guide/) | ✅ Complete | Oct 23, 2025 | Reference/Testing | Test failure troubleshooting guide - Common test failures and fixes |
+| [waste-vapes-analysis](waste-vapes-analysis/) | ✅ Complete | Oct 23, 2025 | Reference/Analysis | Waste vapes waste stream analysis - Waste stream categorization |
 
 ### Deployment Scenarios (12 Complete ✅)
 
