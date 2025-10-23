@@ -105,19 +105,6 @@ Salesforce_OldOrg_State/
 | [rlcs-vendor-invoice-sage](rlcs-vendor-invoice-sage/) | ✅ Complete | Oct 23, 2025 | 1 class (163 lines), 1 FlexiPage (1369 lines), 34 field dependencies | RLCS Vendor Invoice Sage Export Fix - **Implemented Oct 6, 2025 at 16:19 UTC.** Two-part fix: (1) Added RLCS_Nominal_Code__c and RLCS_Cost_Centre__c to batch SOQL query (line 21). (2) Removed Invoice_Status restrictions from CSV button visibility (lines 167-179). **Batch export now works for >5 invoices.** CSV button always visible (matches RLES). **213 RLCS invoices processed successfully since fix.** Test-first deployment strategy (NewOrg 45 min before OldOrg). |
 | [bam-construct-portal-license](bam-construct-portal-license/) | ✅ Complete | Oct 23, 2025 | 1 formula field, 1 layout (401 lines), 1 class (296 lines), 1 LWC (291 lines) | BAM Construct Portal License Visibility Fix - **Implemented Oct 15, 2025.** Enables HQ portal users to view supplier waste carrier licenses for UK compliance. Created formula field Waste_Carrier_License_Expiry__c on Job object. Updated Job portal layout (lines 96-100), Utility_Community.cls (lines 23, 40-41), and depotViewCommunity LWC (lines 40-41, 64-72). **137 HQ users can now verify supplier licenses.** Deploy IDs: 0AfSj000000yqlJKAQ, 0AfSj000000yqtNKAQ. |
 
-**Next Scenarios to Document** (Priority Order - Deployment Scenarios):
-
-| # | Scenario | Source Documentation | Complexity | Est. Time |
-|---|----------|---------------------|------------|-----------|
-| 7 | ~~cs-invoicing~~ | ~~CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 8 | ~~secondary-transport~~ | ~~SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 9 | ~~po-consumption-emails~~ | ~~PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md (Backup/)~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 10 | ~~job-charge-credit-on-account~~ | ~~JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/)~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 11 | ~~rlcs-vendor-invoice-sage~~ | ~~RLCS_VENDOR_INVOICE_SAGE_EXPORT_FIX.md (Documentation/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
-
-**Configuration/Analysis Scenarios Available**:
-- sage-api-integration (SAGE_API_HTTP_401_AUTHENTICATION_FIX.md) - OAuth re-authentication, NO code deployment
-
 ---
 
 ## Fresh Start - Enhanced Workflow (Oct 22, 2025)
