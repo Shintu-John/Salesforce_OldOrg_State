@@ -86,7 +86,7 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
-### Deployment Scenarios (9 Complete ✅)
+### Deployment Scenarios (10 Complete ✅)
 
 **Purpose**: Code changes, bug fixes, new features that need to be migrated from OldOrg to NewOrg.
 
@@ -101,6 +101,7 @@ Salesforce_OldOrg_State/
 | [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 23, 2025 | 3 classes (142+819+153 lines), 2 test classes, 1 field | CS Invoicing Date & Description auto-population - **Implemented Oct 10-13, 2025.** Adds buildChargeDescription() method, Collection_Date__c field. Method signature change: createAutoJobCharge(Job object) eliminates inline SOQL (performance gain). **75.65% coverage.** Invoice filtering via "Raised Between" now works. CS Invoicing team gets automatic visibility. |
 | [secondary-transport](secondary-transport/) | ✅ Complete | Oct 23, 2025 | 4 classes (819+325+621+149 lines), 3 fields, 1 validation rule | Secondary Transport & CSV Upload Fix - **Two-phase implementation (Oct 7-8, 2025).** Phase 1: Secondary transport charges (TWO charges per job). Phase 2: CSV columns 14-15 mapping fix. **100% test coverage.** Resolved 97 invalid Jobs issue (£19K-£29K). Prevents NULL weight/units from CSV uploads. Eliminates manual data entry. |
 | [po-consumption-emails](po-consumption-emails/) | ✅ Complete | Oct 23, 2025 | 1 custom setting (5 fields), 1 flow, 6 Order fields, 3 formulas | PO Consumption Email Notifications - **Implemented Oct 14, 2025.** Multi-threshold monitoring system (50%, 75%, 90%). Alerts 4 stakeholders when Purchase Orders reach critical consumption levels. **Option B reset logic** enables re-notification if consumption fluctuates. Scalable configuration via Custom Setting. Currently monitoring PO #00059438 (£63K max value). System active and operational. |
+| [job-charge-credit-on-account](job-charge-credit-on-account/) | ✅ Complete | Oct 23, 2025 | 1 flow (198 lines), 11 field dependencies, 3 Account IDs | Job Charge Credit on Account Data Integrity Fix - **Implemented Oct 22, 2025 at 11:30 UTC.** Removed "Credit on Account" from Flow entry criteria. Flow now executes ONLY on Rebate charges (as intended). **Fixed 3 broken charges (1.08% of 279).** Changed filterLogic from "1 AND (2 OR 3)" to "1 AND 2 AND 3 AND 4 AND 5". Prevents Cost__c field corruption on Credit on Account charges. **26 new charges post-fix with zero issues.** Line-by-line XML verification complete. |
 
 **Next Scenarios to Document** (Priority Order - Deployment Scenarios):
 
@@ -109,7 +110,7 @@ Salesforce_OldOrg_State/
 | 7 | ~~cs-invoicing~~ | ~~CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
 | 8 | ~~secondary-transport~~ | ~~SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/)~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
 | 9 | ~~po-consumption-emails~~ | ~~PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md (Backup/)~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 10 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/) | Low | 1 hour |
+| 10 | ~~job-charge-credit-on-account~~ | ~~JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/)~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
 | 11 | rlcs-vendor-invoice-sage | RLCS_VENDOR_INVOICE_SAGE_EXPORT_FIX.md (Documentation/) | Medium | 1.5-2 hours |
 
 **Configuration/Analysis Scenarios Available**:
