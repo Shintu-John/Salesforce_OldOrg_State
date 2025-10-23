@@ -86,7 +86,7 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
-### Deployment Scenarios (6 Complete ✅)
+### Deployment Scenarios (7 Complete ✅)
 
 **Purpose**: Code changes, bug fixes, new features that need to be migrated from OldOrg to NewOrg.
 
@@ -98,6 +98,7 @@ Salesforce_OldOrg_State/
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 23, 2025 | 2 new classes, 1 modified class, 2 test classes | Two-tier consolidated email reporting system. **Implemented Oct 20, 2025.** Reduces email volume 99.6% (556 → 2 daily reports). Tier 1: Delivery Confirmation (438 Jobs, 8 AM). Tier 2: Schedule Creation (133 Jobs, 9 AM). Eliminates record locking errors. |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 23, 2025 | 2 classes, 1 trigger, 6 flows | SPF/DMARC email fix for portal exchanges. **Implemented Oct 16, 2025.** Resolves email rejection for customers with strict SPF policies (Amey Highways). Portal flows now send from org-wide address. Handler extracts portal user email for Contact/Account matching. |
 | [transport-charges](transport-charges/) | ✅ Complete | Oct 23, 2025 | 2 classes (819+2400 lines), 1 validation rule | RLCS Transport & Data Issues - **3 critical bugs fixed (Oct 14-15).** Issue 1: Missing charges (£919K recovered). Issue 3: Hybrid calculation bug (£870K saved). **Financial impact: £1.79M.** OrderItem now single source of truth for rates and flags. Line-by-line code verification complete. |
+| [cs-invoicing](cs-invoicing/) | ✅ Complete | Oct 23, 2025 | 3 classes (142+819+153 lines), 2 test classes, 1 field | CS Invoicing Date & Description auto-population - **Implemented Oct 10-13, 2025.** Adds buildChargeDescription() method, Collection_Date__c field. Method signature change: createAutoJobCharge(Job object) eliminates inline SOQL (performance gain). **75.65% coverage.** Invoice filtering via "Raised Between" now works. CS Invoicing team gets automatic visibility. |
 
 **Next Scenarios to Document** (Priority Order - Deployment Scenarios):
 
@@ -333,8 +334,8 @@ For complete workflow instructions, see:
 
 **Repository Status**: ✅ Enhanced Workflow Proven Successful
 **Last Updated**: October 23, 2025
-**Total Scenarios**: 10 complete (6 deployment + 4 analysis/configuration)
-**Deployment Scenarios**: 6 of 18 complete (33.3%)
+**Total Scenarios**: 11 complete (7 deployment + 4 analysis/configuration)
+**Deployment Scenarios**: 7 of 18 complete (38.9%)
 **Configuration Scenarios**: 4 of 8 complete (50.0%)
-**Overall Progress**: 28.6% complete (10/35 scenarios)
-**Next Deployment**: cs-invoicing (Medium Priority #7)
+**Overall Progress**: 31.4% complete (11/35 scenarios)
+**Next Deployment**: secondary-transport (Medium Priority #8)
