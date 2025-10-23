@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Applicable_Charge</name>
+        <label>Applicable Charge?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sales_Account__r.Account_Uses_Ratecard__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>jobChargeMargin</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>20.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Don_t_Apply_Auto_Margin__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Vendor_Account__r.Don_t_Apply_Rebate_Margin__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Cost</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>22/10/2025: Removed Credit on Account from filter - should only run on Rebate charges
+15/01/2025: Bypassed for BT, BG and JLP</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>jobChargeMargin</name>
+        <dataType>Number</dataType>
+        <expression>IF( {!Get_Job_Supplier_Cost.Supplier_Price__c} &gt; 0,
+(({!Get_Job_Supplier_Cost.Supplier_Price__c}-{!Get_Job_Supplier_Cost.Sales_Price__c} )/{!Get_Job_Supplier_Cost.Supplier_Price__c})*100,
+
+99)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>jobSalesCost</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+  {!Get_Job_Supplier_Cost.Supplier_Price__c} &gt; 0,
+  ROUND({!Get_Job_Supplier_Cost.Supplier_Price__c} * 0.8, 0),
+  NULL
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>Remove_20p_Margin_Full_Weight</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+  {!Get_Job_Supplier_Cost.Supplier_Price__c} &gt; 0,
+  (ROUND({!Get_Job_Supplier_Cost.Supplier_Price__c} * 0.8, 0)) * {!Get_Job_Supplier_Cost.Weight__c},
+  NULL
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Job Charge: Minimum 20% Gross on Rebate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Job Charge: Minimum 20% Gross on Rebate</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Job_Supplier_Cost</name>
+        <label>Get Job Supplier Cost</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Applicable_Charge</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Job__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Job__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Cost</name>
+        <label>Update Cost</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Update_Job_Sales_Cost</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cost__c</field>
+            <value>
+                <elementReference>Remove_20p_Margin_Full_Weight</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Job_Sales_Cost</name>
+        <label>Update Job Sales Cost</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Sales_Price__c</field>
+            <value>
+                <elementReference>jobSalesCost</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Job__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Job_Supplier_Cost</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND 4 AND 5</filterLogic>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <dateTimeValue>2025-01-15T00:01:00.000Z</dateTimeValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Charge_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rebate</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Vendor_Account__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>0012400000UtGrjAAF</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Vendor_Account__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>0012400000kFifTAAS</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Vendor_Account__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>0012400000RIw4FAAT</stringValue>
+            </value>
+        </filters>
+        <object>Job_Charge__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
