@@ -1,0 +1,114 @@
+<template>
+    <lightning-spinner variant="brand" if:true={isLoading} alternative-text="Loading" size="large"></lightning-spinner>
+    <lightning-card>
+        <div>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12" padding="around-small">
+                    <div class="custom-box slds-p-bottom_small" style="display:flex;">
+                        <div style="width: 40vw;">
+                            <div>
+                                <c-multi-selection-community label="Select a Site" option='site' sort-option="true"
+                                    options={siteOptions} onselection={onSiteSelectionChangeHandler}>
+                                </c-multi-selection-community>
+                            </div>
+                        </div>
+                        <div class="slds-float_right slds-p-right_medium slds-p-around_large slds-p-left_small"
+                            style="margin-left: auto; display: flex;">
+                            <div>
+                                <lightning-button variant="brand-outline" class="brand-icon" label="Search"
+                                    onclick={handleSearchJobs}>
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+            <!-- Site Selection -->
+            <div style="min-height: 250px;">
+                <template if:true={selectAll}>
+                    <p>Showing jobs for all sites</p>
+                </template>
+
+                <!-- Display Invoices -->
+                <template lwc:if={jobs}>
+                    <div class="slds-m-around_medium table-container">
+                        <table style="table-layout: auto;"
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_fixed-layout slds-table_striped table-section">
+                            <thead>
+                                <tr>
+                                    <th>Waste Carrier</th>
+                                    <th>License Number</th>
+                                    <th>License Expiry</th>
+                                    <th>Waste Destination</th>
+                                    <th>Waste Type</th>
+                                    <th>EWC Code</th>
+                                    <th>First Service</th>
+                                    <th>Last Service</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Loop through each Waste Type -->
+                                <template iterator:supplier={tableData}>
+                                    <template iterator:depot={supplier.value.depots}>
+                                        <template iterator:wastetype={depot.value.wasteTypes}>
+                                            <template iterator:ewccode={wastetype.value.ewcCodes}>
+                                                <tr key={ewccode.value.ewcCode}>
+                                                    <template lwc:if={ewccode.first}>
+                                                        <template lwc:if={wastetype.first}>
+                                                            <template lwc:if={depot.first}>
+                                                                <td class="slds-cell-wrap" title={supplier.value.supplierName} rowspan={supplier.value.rowspan}>
+                                                                    <span class="sticky-cell-span">
+                                                                        <a href={supplier.value.link} target="_blank">{supplier.value.supplierName}</a>
+                                                                    </span>
+                                                                </td>
+                                                                <td class="slds-cell-wrap" title={supplier.value.licenseNumber} rowspan={supplier.value.rowspan}>
+                                                                    <span class="sticky-cell-span">{supplier.value.licenseNumber}</span>
+                                                                </td>
+                                                                <td class="slds-cell-wrap" rowspan={supplier.value.rowspan}>
+                                                                    <span class="sticky-cell-span">
+                                                                        <lightning-formatted-date-time value={supplier.value.licenseExpiry} year="numeric" month="2-digit" day="2-digit">
+                                                                        </lightning-formatted-date-time>
+                                                                    </span>
+                                                                </td>
+                                                            </template>
+                                                            <td class="slds-cell-wrap" title={depot.value.depotDispose} rowspan={depot.value.rowspan}>
+                                                                <span class="sticky-cell-span">
+                                                                    <a href={depot.value.link} target="_blank">{depot.value.depotDispose}</a>
+                                                                </span>
+                                                            </td>
+                                                        </template>
+                                                        <td class="slds-cell-wrap" title={wastetype.value.wasteType} rowspan={wastetype.value.rowspan}>
+                                                            <span class="sticky-cell-span">{wastetype.value.wasteType}</span>
+                                                        </td>
+                                                    </template>
+                                                    <td class="slds-cell-wrap">
+                                                        {ewccode.value.ewcCode}
+                                                    </td>
+                                                    <td class="slds-cell-wrap">
+                                                        <lightning-formatted-date-time
+                                                            value={ewccode.value.firstService} year="numeric"
+                                                            month="2-digit" day="2-digit">
+                                                        </lightning-formatted-date-time>
+                                                    </td>
+                                                    <td class="slds-cell-wrap">
+                                                        <lightning-formatted-date-time value={ewccode.value.lastService}
+                                                            year="numeric" month="2-digit" day="2-digit">
+                                                        </lightning-formatted-date-time>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </template>
+                                    </template>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+
+                <template if:true={error}>
+                    <p>{error}</p>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
