@@ -92,13 +92,14 @@ Salesforce_OldOrg_State/
 
 | Scenario | Status | Last Updated | Components | Description |
 |----------|--------|--------------|------------|-------------|
-| [producer-portal](producer-portal/) | ✅ Complete | Oct 23, 2025 | 8 classes, 4 triggers, 5 objects, 3 flows | WEEE compliance Producer Portal - 102 contracts, quarterly tonnage submissions. **All 5 stakeholder issues fixed (Oct 20-21).** Includes sharing automation for Login license users. |
+| [producer-portal](producer-portal/) | ✅ Complete | Oct 22, 2025 | 8 classes, 4 triggers, 5 objects, 3 flows | WEEE compliance Producer Portal - 102 contracts, quarterly tonnage submissions. **All 5 stakeholder issues fixed (Oct 20-21).** Includes sharing automation for Login license users. |
+| [email-to-case-assignment](email-to-case-assignment/) | ✅ Complete | Oct 23, 2025 | 2 classes, 1 flow, 1 custom setting, 6 fields | Email-to-Case automatic assignment system - Workload distribution for 8 Customer Service users. **V3 includes SOQL optimization, recursion prevention, Kaylie Morris exemption.** Threshold-based assignment (20-case soft limit) with same-day previous owner logic. |
 
 **Next Scenarios to Document** (Priority Order):
 
 | # | Scenario | Source Documentation | Complexity | Est. Time |
 |---|----------|---------------------|------------|-----------|
-| 1 | email-to-case-assignment | EMAIL_TO_CASE_ASSIGNMENT_MASTER.md | High | 2-3 hours |
+| 1 | ~~email-to-case-assignment~~ | ~~EMAIL_TO_CASE_ASSIGNMENT_MASTER.md~~ | ~~High~~ | **✅ COMPLETE** (Oct 23, 2025) |
 | 2 | sage-api-integration | SAGE_API_HTTP_401_AUTHENTICATION_FIX.md | Medium | 1.5-2 hours |
 | 3 | daily-reminder-emails | DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
 | 4 | portal-exchange-email | PORTAL_EXCHANGE_EMAIL_FIX_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
