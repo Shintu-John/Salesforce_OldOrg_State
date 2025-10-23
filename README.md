@@ -86,7 +86,7 @@ Salesforce_OldOrg_State/
 | [quote-to-order-process](quote-to-order-process/) | ✅ Complete | Oct 22, 2025 | User Training | Quote-to-Order process documentation - User error analysis (wrong PO selection) - Training guide and best practices |
 | [fred-certificate-renewal](fred-certificate-renewal/) | ✅ Complete | Oct 22, 2025 | Configuration/Certificate | FRED Integration certificate renewal procedure - Certificate expires Nov 9, 2025 (16 days) - Complete renewal process with step-by-step instructions |
 
-### Deployment Scenarios (1 Complete ✅)
+### Deployment Scenarios (3 Complete ✅)
 
 **Purpose**: Code changes, bug fixes, new features that need to be migrated from OldOrg to NewOrg.
 
@@ -94,19 +94,20 @@ Salesforce_OldOrg_State/
 |----------|--------|--------------|------------|-------------|
 | [producer-portal](producer-portal/) | ✅ Complete | Oct 22, 2025 | 8 classes, 4 triggers, 5 objects, 3 flows | WEEE compliance Producer Portal - 102 contracts, quarterly tonnage submissions. **All 5 stakeholder issues fixed (Oct 20-21).** Includes sharing automation for Login license users. |
 | [email-to-case-assignment](email-to-case-assignment/) | ✅ Complete | Oct 23, 2025 | 2 classes, 1 flow, 1 custom setting, 6 fields | Email-to-Case automatic assignment system - Workload distribution for 8 Customer Service users. **V3 includes SOQL optimization, recursion prevention, Kaylie Morris exemption.** Threshold-based assignment (20-case soft limit) with same-day previous owner logic. |
+| [invoice-email-portal-access](invoice-email-portal-access/) | ✅ Complete | Oct 23, 2025 | 5 classes, 1 trigger, 1 page | Invoice Portal enhancement - Enables customers to view and download invoice PDFs from public portal. **Implemented Oct 9, 2025.** Includes automatic ContentDistribution creation via trigger, invoice PDF deduplication logic, and portal UI updates. |
 
 **Next Scenarios to Document** (Priority Order):
 
 | # | Scenario | Source Documentation | Complexity | Est. Time |
 |---|----------|---------------------|------------|-----------|
 | 1 | ~~email-to-case-assignment~~ | ~~EMAIL_TO_CASE_ASSIGNMENT_MASTER.md~~ | ~~High~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 2 | sage-api-integration | SAGE_API_HTTP_401_AUTHENTICATION_FIX.md | Medium | 1.5-2 hours |
-| 3 | daily-reminder-emails | DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
-| 4 | portal-exchange-email | PORTAL_EXCHANGE_EMAIL_FIX_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
-| 5 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md | Medium | 1.5-2 hours |
-| 6 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md | Medium | 1.5-2 hours |
-| 7 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md | Low | 1-1.5 hours |
-| 8 | invoice-email-portal-access | INVOICE_EMAIL_PORTAL_ACCESS_SOLUTION.md | Low | 1-1.5 hours |
+| 2 | ~~invoice-email-portal-access~~ | ~~INVOICE_EMAIL_PORTAL_ACCESS_SOLUTION.md~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
+| 3 | sage-api-integration | SAGE_API_HTTP_401_AUTHENTICATION_FIX.md | Medium | 1.5-2 hours |
+| 4 | daily-reminder-emails | DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
+| 5 | portal-exchange-email | PORTAL_EXCHANGE_EMAIL_FIX_COMPLETE_GUIDE.md | Medium | 1.5-2 hours |
+| 6 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md | Medium | 1.5-2 hours |
+| 7 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md | Medium | 1.5-2 hours |
+| 8 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md | Low | 1-1.5 hours |
 | 9 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md | Low | 1 hour |
 
 ---
