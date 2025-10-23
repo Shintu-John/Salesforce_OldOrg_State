@@ -98,19 +98,19 @@ Salesforce_OldOrg_State/
 | [daily-reminder-emails](daily-reminder-emails/) | ✅ Complete | Oct 23, 2025 | 2 new classes, 1 modified class, 2 test classes | Two-tier consolidated email reporting system. **Implemented Oct 20, 2025.** Reduces email volume 99.6% (556 → 2 daily reports). Tier 1: Delivery Confirmation (438 Jobs, 8 AM). Tier 2: Schedule Creation (133 Jobs, 9 AM). Eliminates record locking errors. |
 | [portal-exchange-email](portal-exchange-email/) | ✅ Complete | Oct 23, 2025 | 2 classes, 1 trigger, 6 flows | SPF/DMARC email fix for portal exchanges. **Implemented Oct 16, 2025.** Resolves email rejection for customers with strict SPF policies (Amey Highways). Portal flows now send from org-wide address. Handler extracts portal user email for Contact/Account matching. |
 
-**Next Scenarios to Document** (Priority Order):
+**Next Scenarios to Document** (Priority Order - Deployment Scenarios):
 
 | # | Scenario | Source Documentation | Complexity | Est. Time |
 |---|----------|---------------------|------------|-----------|
-| 1 | ~~email-to-case-assignment~~ | ~~EMAIL_TO_CASE_ASSIGNMENT_MASTER.md~~ | ~~High~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 2 | ~~invoice-email-portal-access~~ | ~~INVOICE_EMAIL_PORTAL_ACCESS_SOLUTION.md~~ | ~~Low~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 3 | sage-api-integration | SAGE_API_HTTP_401_AUTHENTICATION_FIX.md | Medium | **CONFIGURATION ONLY** (not deployment) |
-| 4 | ~~daily-reminder-emails~~ | ~~DAILY_REMINDER_EMAILS_COMPLETE_GUIDE.md~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 5 | ~~portal-exchange-email~~ | ~~PORTAL_EXCHANGE_EMAIL_FIX_COMPLETE_GUIDE.md~~ | ~~Medium~~ | **✅ COMPLETE** (Oct 23, 2025) |
-| 6 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md | Medium | 1.5-2 hours |
-| 7 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md | Medium | 1.5-2 hours |
-| 8 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md | Low | 1-1.5 hours |
-| 9 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md | Low | 1 hour |
+| 6 | cs-invoicing | CS_INVOICING_DATE_DESCRIPTION_FIELDS.md (Backup/) | Medium | 1.5-2 hours |
+| 7 | transport-charges | TRANSPORT_CHARGE_ISSUES_CONSOLIDATED.md (Backup/) | Medium | 1.5-2 hours |
+| 8 | secondary-transport | SECONDARY_TRANSPORT_IMPLEMENTATION.md (Backup/) | Medium | 1.5-2 hours |
+| 9 | po-consumption-emails | PO_CONSUMPTION_EMAIL_NOTIFICATIONS.md (Backup/) | Low | 1-1.5 hours |
+| 10 | job-charge-credit-on-account | JOB_CHARGE_CREDIT_ON_ACCOUNT_FIX.md (Backup/) | Low | 1 hour |
+| 11 | rlcs-vendor-invoice-sage | RLCS_VENDOR_INVOICE_SAGE_EXPORT_FIX.md (Documentation/) | Medium | 1.5-2 hours |
+
+**Configuration/Analysis Scenarios Available**:
+- sage-api-integration (SAGE_API_HTTP_401_AUTHENTICATION_FIX.md) - OAuth re-authentication, NO code deployment
 
 ---
 
@@ -333,6 +333,8 @@ For complete workflow instructions, see:
 
 **Repository Status**: ✅ Enhanced Workflow Proven Successful
 **Last Updated**: October 23, 2025
-**Total Scenarios**: 5 complete (1 deployment + 4 analysis/configuration)
-**Progress**: 13.9% complete (5/36 scenarios)
-**Next Steps**: Continue with email-to-case-assignment (High Priority #1)
+**Total Scenarios**: 9 complete (5 deployment + 4 analysis/configuration)
+**Deployment Scenarios**: 5 of 18 complete (27.8%)
+**Configuration Scenarios**: 4 of 8 complete (50.0%)
+**Overall Progress**: 25.7% complete (9/35 scenarios)
+**Next Deployment**: cs-invoicing (Medium Priority #6)
