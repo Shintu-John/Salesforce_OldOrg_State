@@ -1,0 +1,67 @@
+<apex:page cache="false" id="InvoiceFileList" showHeader="false" controller="InvoiceFileListController">
+
+<style>
+    body {
+        background-color: #000f50; 
+    }
+</style>
+
+    <apex:form id="invoiceListForm">
+        <!-- Display the logo -->
+        <p align="center">
+            <img
+                 height="65"
+                 src="https://recyclinglives.my.salesforce.com/servlet/servlet.ImageServer?id=015Sj000000KD17&oid=00D24000000j5Yh"
+                 alt="Recycling Lives Services"
+                 data-image-whitelisted=""/>
+        </p>
+        
+        <!-- Display a place for messages -->
+        <apex:outputPanel rendered="{!displayMessage}" id="messagePanel" style="font-size:15px;">
+            <p width="100%">
+                <apex:pageMessages />
+            </p>
+        </apex:outputPanel>
+        
+        <!-- Display a table of the invoice details -->
+        <div class="customPageBlock">
+            <apex:pageBlock title="Invoice Details" mode="detail">
+                <!-- Invoice Files Section -->
+                <apex:pageBlockSection title="Invoice Files" columns="1" collapsible="false" rendered="{!invoiceFileDetailsList.size > 0}">
+                    <apex:pageBlockSectionItem >
+                        <apex:pageBlockTable value="{!invoiceFileDetailsList}" var="invoiceFile" id="invoiceTable" rowClasses="odd,even" styleClass="tableClass">
+                            <apex:column value="{!invoiceFile.fileName}" headerValue="File Name" />
+                            <apex:column value="{!invoiceFile.docType}" headerValue="Document Type" />
+                            <apex:column headerValue="Action">
+                                <apex:commandButton value="Download" onclick="window.open('{!invoiceFile.url}');return false;"/>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+
+                <apex:pageBlockSection title="Job Paperwork" columns="1" collapsible="false" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputPanel layout="none" rendered="{!AND(NOT(ISBLANK(contentVersionIds)), contentVersionIds != '')}">
+                            <div style="float:right;margin-right: 70px;">
+                                <c:VFZipComponent contentVersionId="{!contentVersionIds}" generatedFileName="{!invoice.Name}" mode="button"/>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:pageBlockTable value="{!fileDetailsList}" var="fileDetails" id="theTable" rowClasses="odd,even" styleClass="tableClass">
+                            <apex:column value="{!fileDetails.jobReference}" headerValue="Job Reference" />
+                            <apex:column value="{!fileDetails.jobChargeNames}" headerValue="Job Charge Reference(s)" />
+                            <apex:column value="{!fileDetails.docType}" headerValue="Document Type" />
+                            <apex:column headerValue="URL">
+                                <a href="{!fileDetails.url}" title="{!fileDetails.fileName}">{!fileDetails.fileName}</a>
+                            </apex:column>
+                            <apex:column headerValue="Action">
+                                <apex:commandButton value="Download" onclick="window.open('{!fileDetails.downloadUrl}');return false;"/>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>
