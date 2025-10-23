@@ -7,7 +7,7 @@
 **Priority:** Medium (#7)
 **Type:** Deployment
 **Implementation Date:** October 10-13, 2025
-**Source Documentation:** [CS_INVOICING_DATE_DESCRIPTION_FIELDS.md](../../home/john/Projects/Salesforce/Backup/Completed_Scenarios/Deployment/CS_INVOICING_DATE_DESCRIPTION_FIELDS.md)
+**Source Documentation:** [CS_INVOICING_DATE_DESCRIPTION_FIELDS.md](source-docs/CS_INVOICING_DATE_DESCRIPTION_FIELDS.md)
 
 ---
 
